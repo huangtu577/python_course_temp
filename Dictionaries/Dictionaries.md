@@ -13,8 +13,9 @@ für ein Autohaus. Die Datenbank des Autohauses sieht folgendermaßen aus:
     98273: {...};
     ... 
 }
-Wobei der Key der hash des Objekts ist, um doppelte Einträge zu verhindern
 ~~~
+Wobei der Key der hash des Objekts ist, um doppelte Einträge zu verhindern
+
 ## Show Inventory()
 Implementiere dazu zuerst eine Funktion, mit der ein Inventar ausgegeben 
 werden kann.
@@ -70,6 +71,31 @@ add_car(cars: Dict[int, Car],
 Wenn das Auto schon in dem Dictionary ist, soll es nicht nochmal eingefügt werden, 
 sondern einfach das Dictionary zurückgegeben werden.
 
+## Remove_car()
+Schreibe eine Funktion, die aus dem Dictionary einen Bestehenden Eintrag löscht. Sollte das Auto nicht vorhanden sein, 
+wird einfach das unveränderte Dict zurückgegeben:
+~~~python 
+def remove_car(cars: Dict[int, Car], 
+               car: Car) -> Dict[int, Car]
+~~~
+
+## Change_Car()
+Schreibe eine Funktion, die ein Bestehenden Eintrag in einem Attribut ändert. Dazu wird das Auto gegeben, und das Attribut, das geändert werden soll. Wenn
+das Auto nicht vorhanden ist, soll ein AssertionError erscheinen:
+~~~python 
+def change_car(cars: Dict[int, Car], 
+               car: Car, 
+               attribute: str, 
+               new_value: Union[str, int]) -> Dict[int, Car]
+~~~
+
+
+## most_valuable()
+Schreibe eine Funktion, die eine Liste an Autos nach Wertigkeit (also der Preis pro 100km) geordnet ausgibt
+(also das Teuerste zuerst).
+~~~python 
+def most_valuable(cars: Dict[int, Car]) -> List[Car]
+~~~
 
 
 
