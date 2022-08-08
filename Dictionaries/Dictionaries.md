@@ -1,7 +1,7 @@
 # Aufgabe
 In dieser Aufgabe geht es um Dictionaries. Schreibe eine Daten Verwaltungssoftware 
 für ein Autohaus. Die Datenbank des Autohauses sieht folgendermaßen aus:
-~~~json
+~~~
 {
     12345: {"Marke": "Mercedes", 
         "Model": "Coupee", 
