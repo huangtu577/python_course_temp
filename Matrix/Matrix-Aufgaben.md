@@ -13,7 +13,7 @@ M = [[1, 2, 3],
     [4, 5, 6, 7], 
     [8, 9, 0]]
 ~~~
-nicht vorkommt, das heißt, dass alle Spalten der Matrix selbe Länge haben.
+nicht vorkommt. Das heißt, dass alle Spalten der Matrix selbe Länge haben.
 
 ### b) Matrix-Matrix-Summe
 Schreibe eine Funktion "sum", die zwei Matritzen miteinder addiert. Die Funktion soll wieder folgende Signatur erfüllen. 
@@ -56,6 +56,6 @@ Sobald die Funktionen implementiert sind, können automatisierte Tests die Korre
 ~~~bash
 $ python -m unittest -v
 ~~~
-Unittest sucht dann in dem Aktuellen working directory nach Dateein, die mit test... .py benannt sind, und lässt diese Laufen.
+Unittest sucht dann in dem Aktuellen working directory nach Datein, die mit test... .py benannt sind, und lässt diese Laufen.
 
-Das *-v* steht für verboose mode, das heißt, du bekommst mehr Information, welche von den Tests erfolgreich waren und welche Fehlgeschlagen sind. Für mehr Informationen verwende die Flag *-h* damit wird dir eine ERklärung zu den verschiedenen Optionen angezeigt.
+Das *-v* steht für verboose mode, das heißt, du bekommst mehr Information, welche von den Tests erfolgreich waren und welche Fehlgeschlagen sind. Für mehr Informationen verwende die Flag *-h* damit wird dir eine Erklärung zu den verschiedenen Optionen angezeigt.
