@@ -27,3 +27,6 @@ def change_car(cars: Dict[int, Car],
 
 def most_valuable(cars: Dict[int, Car]) -> List[Car]:
     pass
+
+def total_earnings(cars: Dict[int, Car]) -> float:
+    pass
