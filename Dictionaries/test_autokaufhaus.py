@@ -97,7 +97,9 @@ class TestAutokaufhaus(unittest.TestCase):
                  "Preis pro 100km": 167.67,
                  "Einnahmen": 678.90}
         
-        
+        # Der := Operator kann in Schleifen/Funktionsaufrufen verwendet werden, 
+        # wenn man einen Wert gleichzeitig als Argument geben möchte, aber gleichzeitig
+        # auch eine Variable zuweisen möchte 
         self.assertIn(Car_1_new, x := auto.change_car(self.cars, 
                                                  Car_1, 
                                                  "Marke", 
@@ -116,6 +118,34 @@ class TestAutokaufhaus(unittest.TestCase):
                                                  Car_1, 
                                                  "Marke", 
                                                  "Nissan"))
+        
+    def test_most_valuable_car(self): 
+        Car_1 = {"Marke": "Toyota",
+                 "Model": "Coupee",
+                 "Baujahr": 2009,
+                 "Anzahl Sitze": 5,
+                 "Kilometer": 542,
+                 "Preis pro 100km": 300000,
+                 "Einnahmen": 678.90}
+
+        cars = auto.add_car(self.cars, Car_1)
+        cars = auto.most_valuable(cars)
+        for i in range(1, len(cars)): 
+            self.assertGreaterEqual(cars[i - 1]["Preis pro 100km"], 
+                                 cars[i]["Preis pro 100km"])
+            
+    def test_total_earnings(self):
+        Car_1 = {"Marke": "Toyota",
+                 "Model": "Coupee",
+                 "Baujahr": 2009,
+                 "Anzahl Sitze": 5,
+                 "Kilometer": 542,
+                 "Preis pro 100km": 300000,
+                 "Einnahmen": 42.69}
+        
+        total = 678.90 + 500.123
+        self.assertEqual(auto.total_earnings(self.cars), total)
+        
     
     
         
