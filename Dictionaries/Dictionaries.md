@@ -96,7 +96,13 @@ Schreibe eine Funktion, die eine Liste an Autos nach Wertigkeit (also der Preis 
 ~~~python 
 def most_valuable(cars: Dict[int, Car]) -> List[Car]
 ~~~
+dabei kann es hilfreich sein, built-In Funktionen von Python zu verwenden.
 
-
+## total_earnings()
+Schreibe eine Funktion, die die Gesamteinnahmen von allen Autos kalkuliert:
+~~~python 
+def total_earnings(cars: Dict[int, Car]) -> float
+~~~
+Auch hier kann es sinnvoll sein, built-In Methoden zu verwenden.
 
 
