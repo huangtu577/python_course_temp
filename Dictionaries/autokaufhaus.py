@@ -7,7 +7,7 @@
 #
 
 from __future__ import annotations
-from typing import Dict, Union
+from typing import Dict, Union, List
 
 Car = dict[str: str,
            str: str,
@@ -32,7 +32,7 @@ def show_inventory(cars: Dict[str, Car]) -> str:
     -------
     str
         Der String, der auch auf dem Terminal ausgegeben wird
-    """    
+    """
     s = ""
     for _, value in cars.items():
         s += f"{value['Marke']} {value['Model']}:\n"
@@ -98,7 +98,7 @@ def remove_car(cars: Dict[int, Car],
     -------
     Dict[int, Car]
         Datenbank, aus der das Auto entfernt wurde
-    """    
+    """
     if car not in cars.values():
         return cars
 
@@ -134,7 +134,7 @@ def change_car(cars: Dict[int, Car],
     -------
     Dict[int, Car]
         Datenbank aus Autos
-    """    
+    """
     assert car in cars.values(), "Das Auto ist nicht Vorhanden im Dictionary"
     assert attribute in car.keys(), "Das Attribut hat das Auto nicht"
 
@@ -143,9 +143,47 @@ def change_car(cars: Dict[int, Car],
     car[attribute] = new_value
     return cars
 
+
 def most_valuable(cars: Dict[int, Car]) -> List[Car]:
-    sorted_cars = sorted(cars.values(), key = lambda x: x["Preis pro 100km"], reverse = True)
+    """Funktion, die eine Liste der Teuersten Autos/100km ausgibt
+
+    Parameters
+    ----------
+    cars : Dict[int, Car]
+        Autos
+
+    Returns
+    -------
+    List[Car]
+        Sortierte Liste
+    """
+
+    # Die Built-in Funktion für sorted() Funktion kann schon Iterables Sortieren,
+    # mit dem Key-Parameter kann man ein Wert Angeben, nach dem Sortiert werden
+    # soll, in diesem Fall nach dem Preis/100km.
+    sorted_cars = sorted(
+        cars.values(), key=lambda x: x["Preis pro 100km"], reverse=True)
     return sorted_cars
+
+
+def total_earnings(cars: Dict[int, Car]) -> float:
+    """Funktion, die die Gesamteinnahmen ausgibt 
+
+    Parameters
+    ----------
+    cars : Dict[int, Car]
+        Datenbank mit Autos
+
+    Returns
+    -------
+    float
+        Gesamteinnahmen
+    """
+
+    # Die Built-In Funktion sum() nimmt als Argument ein Iterable und summiert,
+    # die Werte, vorrausgesetzt "+" ist für diesen Datentyp definiert.
+    total = sum([car["Einnahmen"] for car in cars.values()])
+    return total
 
 
 if __name__ == "__main__":
@@ -163,7 +201,15 @@ if __name__ == "__main__":
              "Kilometer": 420.998,
              "Preis pro 100km": 200.6754,
              "Einnahmen": 500.123}
+    Car_3 = {"Marke": "Toyota",
+             "Model": "Coupee",
+             "Baujahr": 2009,
+             "Anzahl Sitze": 5,
+             "Kilometer": 542,
+             "Preis pro 100km": 300000,
+             "Einnahmen": 678.90}
     cars = {hash("".join([str(value) for value in Car_1.values()])): Car_1,
-            hash("".join([str(value) for value in Car_2.values()])): Car_2}
+            hash("".join([str(value) for value in Car_2.values()])): Car_2,
+            hash("".join([str(value) for value in Car_3.values()])): Car_3}
     show_inventory(cars)
     print(most_valuable(cars))
