@@ -131,3 +131,5 @@ dmypy.json
 # Sonstiges
 *.ods
 dhbw/
+Slides/
+figs/
