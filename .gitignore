@@ -133,3 +133,5 @@ dmypy.json
 dhbw/
 Slides/
 figs/
+*.png
+*.pdf
