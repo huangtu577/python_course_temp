@@ -95,8 +95,11 @@ Danach sollte das (base) zu einem (studium) werden:
 (studium) fabian@PC:~$ 
 ~~~
 
-Jetzt hast du dein Environment soweit vorbereitet, dass du Angangen kannst Code 
+Jetzt hast du dein Environment soweit vorbereitet, dass du Anfangen kannst Code 
 zu schreiben. 
+Um das Repository hier runterzuladen, kannst du entweder oben rechts auf dem grünen
+*CODE* Knopf eine Zip-Datei mit dem Code runterladen, oder du richtest bei dir direkt
+Github ein und verwendest [*git clone*](https://docs.github.com/en/get-started/quickstart/set-up-git).
 
 ## IDE
 Es gibt viele Verschiedene IDEs für Python, von denen viele an unterschiedlichen 
