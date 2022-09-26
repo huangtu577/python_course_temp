@@ -187,29 +187,34 @@ def total_earnings(cars: Dict[int, Car]) -> float:
 
 
 if __name__ == "__main__":
-    Car_1 = {"Marke": "Mercedes",
-             "Model": "Coupee",
-             "Baujahr": 2009,
-             "Anzahl Sitze": 5,
-             "Kilometer": 542,
-             "Preis pro 100km": 167.67,
-             "Einnahmen": 678.90}
-    Car_2 = {"Marke": "BMW",
-             "Model": "3er",
-             "Baujahr": 1990,
-             "Anzahl Sitze": 3,
-             "Kilometer": 420.998,
-             "Preis pro 100km": 200.6754,
-             "Einnahmen": 500.123}
-    Car_3 = {"Marke": "Toyota",
-             "Model": "Coupee",
-             "Baujahr": 2009,
-             "Anzahl Sitze": 5,
-             "Kilometer": 542,
-             "Preis pro 100km": 300000,
-             "Einnahmen": 678.90}
-    cars = {hash("".join([str(value) for value in Car_1.values()])): Car_1,
-            hash("".join([str(value) for value in Car_2.values()])): Car_2,
-            hash("".join([str(value) for value in Car_3.values()])): Car_3}
-    show_inventory(cars)
-    print(most_valuable(cars))
+    
+    pass
+    # Hier kannst du selber die Funktionen testen. 
+    # Unten habe ich schon paar Beispiele gefchrieben
+    
+    # Car_1 = {"Marke": "Mercedes",
+    #          "Model": "Coupee",
+    #          "Baujahr": 2009,
+    #          "Anzahl Sitze": 5,
+    #          "Kilometer": 542,
+    #          "Preis pro 100km": 167.67,
+    #          "Einnahmen": 678.90}
+    # Car_2 = {"Marke": "BMW",
+    #          "Model": "3er",
+    #          "Baujahr": 1990,
+    #          "Anzahl Sitze": 3,
+    #          "Kilometer": 420.998,
+    #          "Preis pro 100km": 200.6754,
+    #          "Einnahmen": 500.123}
+    # Car_3 = {"Marke": "Toyota",
+    #          "Model": "Coupee",
+    #          "Baujahr": 2009,
+    #          "Anzahl Sitze": 5,
+    #          "Kilometer": 542,
+    #          "Preis pro 100km": 300000,
+    #          "Einnahmen": 678.90}
+    # cars = {hash("".join([str(value) for value in Car_1.values()])): Car_1,
+    #         hash("".join([str(value) for value in Car_2.values()])): Car_2,
+    #         hash("".join([str(value) for value in Car_3.values()])): Car_3}
+    # show_inventory(cars)
+    # print(most_valuable(cars))
