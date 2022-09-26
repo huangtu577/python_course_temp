@@ -28,13 +28,14 @@ Test nicht Klappt, solange die Ausgabe in der Nähe von dem geforderten ist,
 sind Einrückungen vorest egal).
 Hierbei steht die Abkürzung *Car* für 
 ~~~python 
-Car = Dict[str: str,
-           str: str,
-           str: int,
-           str: int,
-           str: float,
-           str: float,
-           str: float]
+Car = Dict[str: str,        # Marke
+           str: str,        # Model
+           str: int,        # Baujahr
+           str: int,        # Anzahl Sitze
+           str: float,      # Kilometer
+           str: float,      # Preis pro 100km
+           str: float       # Einnahmen
+           ]
 ~~~
 Eine Beispielausgabe ist
 ~~~
