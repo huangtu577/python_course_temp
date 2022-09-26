@@ -99,7 +99,7 @@ Jetzt hast du dein Environment soweit vorbereitet, dass du Angangen kannst Code
 zu schreiben. 
 
 ## IDE
-Es gibt viele Verschiedene IDEs für Pyhton, von denen viele an unterschiedlichen 
+Es gibt viele Verschiedene IDEs für Python, von denen viele an unterschiedlichen 
 Stellen Stärken haben.
 - Spyder: Eignet sich sehr gut für die Auswertung von Praktika
 - PyCharm: Eher geeignet für Größere Programmierprojekte, die nicht notwendigerweise
